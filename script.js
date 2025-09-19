@@ -21,21 +21,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const bannerTitle = document.getElementById('banner-title');
     const bannerText = document.getElementById('banner-text');
 
+    // Banners dizisinin tüm elemanlarında aynı görseli kullanacak şekilde güncellendi.
     const banners = [
         {
             title: 'Hızlı ve Güvenilir Çiçek Teslimatı',
             text: 'Sevginizi anında ulaştırıyoruz.',
-            image: './images/arkapilan.png'
+            image: './images/arka-pilan.jpg'
         },
         {
             title: 'Özel Günleriniz İçin En Güzel Çiçekler',
             text: 'Taze ve canlı çiçeklerle anılarınızı renklendirin.',
-            image: 'https://via.placeholder.com/1500x500?text=Banner+Resmi+2'
+            image: './images/arka-pilan.jpg'
         },
         {
             title: 'Özel Tasarım Buketler',
             text: 'Size özel tasarımlarla fark yaratın.',
-            image: 'https://via.placeholder.com/1500x500?text=Banner+Resmi+3'
+            image: './images/arka-pilan.jpg'
         }
     ];
 
@@ -91,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         prevButton.addEventListener('click', (e) => {
             e.stopPropagation();
-            currentIndex = (currentIndex > 0) ? currentIndex - 1 : totalImages - 1;
+            currentIndex = (currentIndex > 0) ? currentIndex - 1 : 0;
             updateGallery();
         });
 
@@ -106,4 +107,3 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
-
