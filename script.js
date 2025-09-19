@@ -5,10 +5,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const cartButtons = document.querySelectorAll('.add-to-cart');
     cartButtons.forEach(button => {
         button.addEventListener('click', (e) => {
-            e.stopPropagation(); // Ürün kartının modal'ı açmasını engelle
+            e.stopPropagation(); 
             cartCount++;
             cartCountElement.textContent = cartCount;
-            // Bir uyarı yerine, sepet sayacının animasyonla büyümesini sağlayabiliriz
             cartCountElement.classList.add('pulse');
             setTimeout(() => {
                 cartCountElement.classList.remove('pulse');
@@ -21,22 +20,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const bannerTitle = document.getElementById('banner-title');
     const bannerText = document.getElementById('banner-text');
 
-    // Banners dizisinin tüm elemanlarında aynı görseli kullanacak şekilde güncellendi.
     const banners = [
         {
             title: 'Hızlı ve Güvenilir Çiçek Teslimatı',
             text: 'Sevginizi anında ulaştırıyoruz.',
-            image: './images/arkapilan.png'
+            image: './images/arka-pilan.jpg'
         },
         {
             title: 'Özel Günleriniz İçin En Güzel Çiçekler',
             text: 'Taze ve canlı çiçeklerle anılarınızı renklendirin.',
-            image: './images/arkapilan.png'
+            image: './images/arka-pilan.jpg'
         },
         {
             title: 'Özel Tasarım Buketler',
             text: 'Size özel tasarımlarla fark yaratın.',
-            image: './images/arkapilan.png'
+            image: './images/arka-pilan.jpg'
         }
     ];
 
@@ -47,7 +45,17 @@ document.addEventListener('DOMContentLoaded', () => {
         bannerTitle.textContent = banners[currentBannerIndex].title;
         bannerText.textContent = banners[currentBannerIndex].text;
     }
-    setInterval(updateBanner, 5000); // Her 5 saniyede bir banner'ı değiştir
+    setInterval(updateBanner, 5000); 
+
+    // Mobil Menü İşlevselliği
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mainNav = document.querySelector('.main-nav');
+    const headerIcons = document.querySelector('.header-icons');
+
+    menuToggle.addEventListener('click', () => {
+        mainNav.classList.toggle('active');
+        headerIcons.classList.toggle('active');
+    });
 
     // Ürün Detay Modal'ı İşlevselliği
     const modal = document.getElementById('productModal');
@@ -107,4 +115,3 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
-
