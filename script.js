@@ -52,6 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const modal = document.getElementById('productModal');
     const closeBtn = document.querySelector('.close-btn');
     const modalBody = document.getElementById('modal-body');
+    const productCards = document.querySelectorAll('.product-card');
 
     productCards.forEach(card => {
         card.addEventListener('click', () => {
@@ -81,7 +82,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Her bir ürün kartı için galeri işlevselliği
-    const productCards = document.querySelectorAll('.product-card');
     productCards.forEach(card => {
         const prevButton = card.querySelector('.prev-btn');
         const nextButton = card.querySelector('.next-btn');
@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         prevButton.addEventListener('click', (e) => {
             e.stopPropagation();
-            currentIndex = (currentIndex > 0) ? currentIndex - 1 : 0;
+            currentIndex = (currentIndex > 0) ? currentIndex - 1 : totalImages - 1;
             updateGallery();
         });
 
@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         function updateGallery() {
-            wrapper.style.transform = `translateX(${-currentIndex * 100}%)`;
+            wrapper.style.transform = `translateX(${-currentIndex * (100 / totalImages)}%)`;
         }
     });
 });
