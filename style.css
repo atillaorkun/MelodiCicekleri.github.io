@@ -150,7 +150,7 @@ a {
 
 /* Banner Alanı */
 .hero-banner {
-    background: url('./images/arka-pilan.jpg') no-repeat center center/cover;
+    background: url('./images/arkapilan.png') no-repeat center center/cover;
     height: 400px;
     display: flex;
     flex-direction: column;
@@ -414,3 +414,4 @@ a {
     margin-top: 20px;
     font-size: 0.9em;
 }
+
