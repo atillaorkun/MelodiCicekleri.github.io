@@ -26,17 +26,17 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             title: 'Hızlı ve Güvenilir Çiçek Teslimatı',
             text: 'Sevginizi anında ulaştırıyoruz.',
-            image: './images/arka-pilan.jpg'
+            image: './images/arkapilan.png'
         },
         {
             title: 'Özel Günleriniz İçin En Güzel Çiçekler',
             text: 'Taze ve canlı çiçeklerle anılarınızı renklendirin.',
-            image: './images/arka-pilan.jpg'
+            image: './images/arkapilan.png'
         },
         {
             title: 'Özel Tasarım Buketler',
             text: 'Size özel tasarımlarla fark yaratın.',
-            image: './images/arka-pilan.jpg'
+            image: './images/arkapilan.png'
         }
     ];
 
@@ -107,3 +107,4 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
