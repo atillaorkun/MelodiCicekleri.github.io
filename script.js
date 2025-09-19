@@ -23,13 +23,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const banners = [
         {
-            title: 'Özel Günleriniz İçin En Güzel Çiçekler',
-            text: 'Taze ve canlı çiçeklerle anılarınızı renklendirin.',
-            image: 'https://via.placeholder.com/1500x500?text=Banner+Resmi+1'
-        },
-        {
             title: 'Hızlı ve Güvenilir Çiçek Teslimatı',
             text: 'Sevginizi anında ulaştırıyoruz.',
+            image: './images/arka-pilan.jpg'
+        },
+        {
+            title: 'Özel Günleriniz İçin En Güzel Çiçekler',
+            text: 'Taze ve canlı çiçeklerle anılarınızı renklendirin.',
             image: 'https://via.placeholder.com/1500x500?text=Banner+Resmi+2'
         },
         {
