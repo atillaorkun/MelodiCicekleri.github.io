@@ -88,6 +88,10 @@ a {
     color: var(--primary-color);
 }
 
+.main-nav {
+    display: block; /* Mobil menü için görünür hale getirildi */
+}
+
 .main-nav ul {
     list-style: none;
     margin: 0;
@@ -146,6 +150,12 @@ a {
     font-size: 0.7em;
     padding: 2px 6px;
     border-radius: 50%;
+}
+
+.menu-toggle {
+    display: none; /* Masaüstünde gizle */
+    font-size: 1.5rem;
+    cursor: pointer;
 }
 
 /* Banner Alanı */
@@ -220,14 +230,14 @@ a {
 .image-gallery {
     position: relative;
     width: 100%;
-    height: 300px; /* Resim boyutuna göre ayarlandı */
-    overflow: hidden; /* Taşan resimleri gizler */
+    height: 300px; 
+    overflow: hidden; 
     border-radius: 8px;
 }
 
 .images-wrapper {
     display: flex;
-    width: 200%; /* İki resim için %200 genişlik */
+    width: 200%; 
     height: 100%;
     transition: transform 0.5s ease-in-out;
 }
@@ -235,7 +245,7 @@ a {
 .images-wrapper img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Resimlerin bozulmadan alana sığmasını sağlar */
+    object-fit: cover; 
 }
 
 .gallery-nav {
@@ -413,4 +423,86 @@ a {
 .copyright {
     margin-top: 20px;
     font-size: 0.9em;
+}
+
+/* Mobil Cihazlar İçin Stil Ayarları (768px ve altı) */
+@media (max-width: 768px) {
+    .main-header {
+        padding: 15px 20px;
+        flex-wrap: wrap;
+    }
+
+    .main-header .logo {
+        flex-grow: 1;
+        order: 1; /* Logoyu sola hizala */
+    }
+
+    .menu-toggle {
+        display: block; /* Hamburger menüyü göster */
+        order: 2; /* İkonu ortaya al */
+    }
+
+    .header-icons {
+        display: none; /* ikonları başlangıçta gizle */
+        order: 3;
+        flex-basis: 100%; /* ikonları yeni satıra al */
+        justify-content: center;
+        margin-top: 15px;
+    }
+
+    .main-nav {
+        order: 4;
+        flex-basis: 100%; /* Yeni satıra geçmesini sağla */
+        display: none; /* Başlangıçta gizle */
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-nav ul li {
+        margin: 10px 0;
+    }
+
+    .hero-banner {
+        height: 300px;
+    }
+
+    .hero-banner h2 {
+        font-size: 2em;
+    }
+
+    .hero-banner p {
+        font-size: 1em;
+    }
+
+    .feature-section {
+        flex-direction: column;
+    }
+
+    .feature-item {
+        margin-bottom: 20px;
+    }
+
+    .container {
+        grid-template-columns: 1fr; /* Ürünleri tek sütuna diz */
+        padding: 10px;
+    }
+
+    .product-card {
+        margin-bottom: 20px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-info,
+    .social-links {
+        margin-bottom: 20px;
+    }
 }
